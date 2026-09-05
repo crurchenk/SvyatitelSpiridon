@@ -1,5 +1,5 @@
-const PRICE_PER_NAME = 100;
-const PAYMENT_URL = '#'; // После подключения ПСБ сюда поставим реальную ссылку или заменим на API-интеграцию.
+const PRICE_PER_NAME = 45;
+const PAYMENT_URL = 'https://github.com/crurchenk/SvyatitelSpiridon/blob/main/images/hero.jpg?raw=true'; // После подключения ПСБ сюда поставим реальную ссылку или заменим на API-интеграцию.
 const namesBox = document.querySelector('#names');
 const countEl = document.querySelector('#count');
 const amountEl = document.querySelector('#amount');
@@ -18,4 +18,4 @@ function addName(value=''){
 function updateTotals(){const count=document.querySelectorAll('.name-input').length;const amount=count*PRICE_PER_NAME;countEl.textContent=count;amountEl.textContent=amount;payAmountEl.textContent=amount;payLink.href=PAYMENT_URL;}
 addNameBtn.addEventListener('click',()=>addName());
 addName();
-form.addEventListener('submit',e=>{e.preventDefault();const names=[...document.querySelectorAll('.name-input')].map(x=>x.value.trim()).filter(Boolean);const noteType=document.querySelector('input[name="noteType"]:checked').value;const email=document.querySelector('#email').value.trim();const amount=names.length*PRICE_PER_NAME; if(!email||!names.length)return;const request={noteType,names,email,amount,createdAt:new Date().toISOString()};console.log('Заявка, которую позже отправим на e-mail:',request);message.textContent='Скелет формы готов. На следующем этапе подключим настоящую оплату ПСБ и автоматическую отправку заявки на почту матушки.';});
+form.addEventListener('submit',e=>{e.preventDefault();const names=[...document.querySelectorAll('.name-input')].map(x=>x.value.trim()).filter(Boolean);const noteType=document.querySelector('input[name="noteType"]:checked').value;const email=document.querySelector('#email').value.trim();const amount=names.length*PRICE_PER_NAME; if(!email||!names.length)return;const request={noteType,names,email,amount,createdAt:new Date().toISOString()};console.log('Заявка, которую позже отправим на e-mail:',request);message.textContent='True';});
