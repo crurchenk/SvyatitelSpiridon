@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подать записку — Свято-Спиридоновский храм</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Свято-Спиридоновский храм</a>
+      <nav class="nav nav-static"><a href="index.html">Главная</a><a href="index.html#schedule">Расписание</a><a href="index.html#contacts">Контакты</a></nav>
+    </div>
+  </header>
+
+  <main class="notes-page">
+    <div class="container narrow">
+      <a class="back" href="index.html">← На главную</a>
+      <p class="section-kicker">Поминовение</p>
+      <h1>Подать записку</h1>
+      <p class="lead">Заполните форму. После настройки оплаты кнопка ниже будет вести на платёжную страницу ПСБ.</p>
+
+      <form id="notes-form" class="notes-form">
+        <fieldset>
+          <legend>Вид записки</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="noteType" value="О здравии" checked><span>О здравии</span></label>
+            <label class="choice"><input type="radio" name="noteType" value="Об упокоении"><span>Об упокоении</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Имена</legend>
+          <div id="names"></div>
+          <button type="button" class="btn btn-outline" id="add-name">+ Добавить имя</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Связь</legend>
+          <label class="field"><span>Ваш e-mail</span><input type="email" id="email" placeholder="example@mail.ru" required></label>
+        </fieldset>
+
+        <div class="summary">
+          <div><span>Количество имён</span><strong id="count">1</strong></div>
+          <div><span>Сумма</span><strong><span id="amount">100</span> ₽</strong></div>
+        </div>
+
+        <div class="payment-box">
+          <p class="payment-title">Шаг 1. Оплата</p>
+          <p>Сейчас здесь временная кнопка. После подключения ПСБ вставим настоящую платёжную ссылку или API-интеграцию.</p>
+          <a id="pay-link" class="btn btn-primary btn-full" href="#">Оплатить <span id="pay-amount">100</span> ₽</a>
+        </div>
+
+        <button class="btn btn-dark btn-full" type="submit">Я оплатил и отправляю записку</button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/notes.js"></script>
+</body>
+</html>
