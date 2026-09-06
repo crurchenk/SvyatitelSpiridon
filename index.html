@@ -40,7 +40,8 @@
       <div class="container narrow">
         <p class="section-kicker">О храме</p>
         <h2>Добро пожаловать</h2>
-        <p>Здесь разместим краткое обращение прихода, историю храма, сведения о настоятеле и другую информацию.</p>
+        <p>Свято-Спиридоновский храм города Енакиево — место молитвы, духовной поддержки и общения прихожан.</p>
+        <p>На нашем сайте вы можете ознакомиться с расписанием богослужений, узнать новости прихода, подать записку и найти актуальные контакты храма.</p>
       </div>
     </section>
 
@@ -48,10 +49,21 @@
       <div class="container">
         <p class="section-kicker">Расписание</p>
         <h2>Богослужения</h2>
-        <div class="cards">
-          <article class="card"><span>Суббота</span><strong>Вечернее богослужение — 16:00</strong><small>Неподтвержденная инофрмация.</small></article>
-          <article class="card"><span>Воскресенье</span><strong>Божественная литургия — 09:00</strong><small>Здесь будут актуальные сведения.</small></article>
-          <article class="card"><span>Праздничные дни</span><strong>Отдельное расписание</strong><small>Сайт находится на этапе проектирования.</small></article>
+
+        <div class="schedule-paper" id="schedule-paper">
+          <div class="schedule-paper-head">
+            <div>
+              <p class="schedule-label">Расписание богослужений</p>
+              <h3 id="schedule-period">Загрузка…</h3>
+            </div>
+            <div class="schedule-status" id="schedule-status" aria-live="polite"></div>
+          </div>
+
+          <div class="schedule-list" id="schedule-list"></div>
+
+          <div class="schedule-footer">
+            Расписание может изменяться. Следите за актуальными объявлениями прихода.
+          </div>
         </div>
       </div>
     </section>
@@ -67,14 +79,36 @@
       </div>
     </section>
 
+    <section class="section max-callout">
+        <div class="container callout">
+          <div>
+            <p class="section-kicker">Мы в MAX</p>
+            <h2>Новости прихода</h2>
+            <p>
+              Следите за новостями прихода, расписанием богослужений
+              и важными объявлениями в нашем канале.
+            </p>
+          </div>
+      
+          <a
+            class="btn btn-primary"
+            href="https://max.ru/join/Pyg9S5zVX_753oZD0Ky31rXQ8UjtHt_C7z_p25SFuSU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Перейти в группу
+          </a>
+        </div>
+      </section>
+
     <section class="section" id="contacts">
       <div class="container">
         <p class="section-kicker">Контакты</p>
         <h2>Как нас найти</h2>
         <div class="contact-grid">
-          <div class="contact-item"><span>Адрес</span><strong>г. Енакиево, ул. Фильтровальная, 5</strong><small>Адрес находится на уточнении.</small></div>
-          <div class="contact-item"><span>Телефон</span><strong>+7 (___) ___-__-__</strong><small>Номер на уточнении...</small></div>
-          <div class="contact-item"><span>Почта</span><strong>khram2015@inbox.ru</strong><small></small>По всем вопросам о богослужениях, требах и жизни прихода.</div>
+          <div class="contact-item"><span>Адрес</span><strong>г. Енакиево, ул. Брайляна, 10</strong><small>Будем рады видеть вас в храме.</small></div>
+          <div class="contact-item"><span>Телефон</span><strong>+7 (949) 387-56-94</strong><small>Для связи с приходом.</small></div>
+          <div class="contact-item"><span>Почта</span><strong>khram2015@inbox.ru</strong><small>Для обращений и вопросов.</small></div>
         </div>
       </div>
     </section>
